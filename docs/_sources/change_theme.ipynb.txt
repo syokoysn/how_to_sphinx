@@ -19,7 +19,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "それぞれインストールは以下のようにします\n",
+    "それぞれインストールは以下のようにします.  \n",
+    "\n",
     " ```\n",
     " pip install sphinx_rtd_theme\n",
     " ```"
@@ -34,7 +35,7 @@
     "以下のように変更してください\n",
     "\n",
     "\n",
-    "![](./images/change_theme1.png)"
+    "![pict1](./images/change_theme1.png)"
    ]
   },
   {
@@ -42,15 +43,19 @@
    "metadata": {},
    "source": [
     "設定が終わったら,\n",
+    "\n",
     "```\n",
     "python -m sphinx source/ build/\n",
     "make html\n",
     "```\n",
+    "\n",
     "と入力し，\n",
+    "\n",
     "```\n",
     "open build/index.html\n",
     "```\n",
-    "みてみましょう.  \n",
+    "\n",
+    "みてみましょう.   \n",
     "下のように,themeの変更が反映されているはずです．"
    ]
   },
@@ -58,15 +63,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![](./images/change_theme2.png)"
+    "![pict2](./images/change_theme2.png)"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
