@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jupyter notebookを対応させる &mdash; sphinxでwebサイト公開してみる 0.0.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.0',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinxでwebサイト公開してみる
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparation.html">準備</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release.html">公開</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../change_theme.html">Themeを変更する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nbsphinx.html">jupyter notebookを対応させる</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinxでwebサイト公開してみる</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>jupyter notebookを対応させる</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/.ipynb_checkpoints/nbsphinx-checkpoint.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="jupyter-notebookを対応させる">
+<h1>jupyter notebookを対応させる<a class="headerlink" href="#jupyter-notebookを対応させる" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは，jupyter notebookの形式で表示できるようにします．</p>
+<p>すること - nbsphinx のインストール - jupyter notebookの用意 - conf.pyの設定 - index.rstの設定</p>
+<div class="section" id="nbsphinx-のインストール">
+<h2>nbsphinx のインストール<a class="headerlink" href="#nbsphinx-のインストール" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nbsphinx</span>
+</pre></div>
+</div>
+<p><strong>以上!!</strong></p>
+</div>
+<div class="section" id="jupyter-notebookの用意">
+<h2>jupyter notebookの用意<a class="headerlink" href="#jupyter-notebookの用意" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">見せるためのnotebook を用意します.</div>
+<div class="line"><strong>以上!!</strong></div>
+</div>
+</div>
+<div class="section" id="conf.pyの設定">
+<h2>conf.pyの設定<a class="headerlink" href="#conf.pyの設定" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>source ディレクトリ内にあるconf.py に以下の変更を加えます.</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">[</span>&#160;&#160;&#160;&#160; <span class="pre">'nbsphinx'</span> <span class="pre">]</span></code></p>
+<div class="line-block">
+<div class="line">extensionsというリストに <code class="docutils literal notranslate"><span class="pre">'nbsphinx'</span></code>を加えてください.</div>
+<div class="line">加えたら良いので, appendでもいいです.</div>
+<div class="line"><a href="#id2"><span class="problematic" id="id3">**</span></a>以上!! **</div>
+</div>
+</div>
+<div class="section" id="index">
+<h2>index<a class="headerlink" href="#index" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>source ディレクトリ内にある index.rstの設定に以下の変更を加えます.</p>
+<p><a href="#id4"><span class="problematic" id="id5">**</span></a>以上!! **</p>
+<div class="line-block">
+<div class="line">できたらpageをみてみましょう.</div>
+<div class="line"><img alt="image0" src=".ipynb_checkpoints/./images/nbsphinx2.png" /></div>
+</div>
+<div class="line-block">
+<div class="line">Contentsの項目が増えました.!! 準備のリンクへ飛ぶと以下のようなnotebookを元としたpageに行きます.</div>
+<div class="line"><img alt="image0" src=".ipynb_checkpoints/./images/nbsphinx2.png" /></div>
+</div>
+</div>
+<div class="section" id="参考">
+<h2>参考<a class="headerlink" href="#参考" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://nbsphinx.readthedocs.io/en/0.3.5/">nbsphinxnoのwebpage</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Shoko Yoshino
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

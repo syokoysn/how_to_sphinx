@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>公開 &mdash; sphinxでwebサイト公開してみる 0.0.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.0.0',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="Themeを変更する" href="change_theme.html" />
+    <link rel="prev" title="準備" href="preparation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sphinxでwebサイト公開してみる
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">準備</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">公開</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#作業ディレクトリ作成">作業ディレクトリ作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#HTML作成">HTML作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#公開">公開</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#参考">参考</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="change_theme.html">Themeを変更する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nbsphinx.html">jupyter notebookを対応させる</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sphinxでwebサイト公開してみる</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>公開</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/release.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="公開">
+<h1>公開<a class="headerlink" href="#公開" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="line-block">
+<div class="line">ここでは，とりあえず公開することを目標とします．</div>
+<div class="line">## ここですること - 作業ディレクトリ作成 - quickstart - HTML作成 - 公開</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="作業ディレクトリ作成">
+<h2>作業ディレクトリ作成<a class="headerlink" href="#作業ディレクトリ作成" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず ディレクトリを作成し,作ったディレクトリへ移動</p>
+<p>ここでは リポジトリ名(how_to_sphinx)と合わせてます.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir how_to_sphinx
+<span class="nb">cd</span> how_to_sphinx
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="quickstart">
+<h2>quickstart<a class="headerlink" href="#quickstart" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>次に 下のコマンドを打ちます</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">コマンドを打つといくつかの質問がありますが適当に対応してください.</div>
+<div class="line">わりとエンター押して飛ばしても構わないです.以下, 今回のサイト作成時に対応したところです.</div>
+<div class="line">- Project name</div>
+<div class="line">&gt; Project name: sphinxでwebサイト公開してみる - Author name(s) &gt; Author name(s): Shoko Yoshino - Project release &gt; Project release : 0.0.0 - Project language [en]: &gt; Project language [en]: ja</div>
+</div>
+<p>この段階までくると以下のようなディレクトリ構造になっています.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── Makefile
+├── build
+├── make.bat
+└── source
+    ├── _static
+    ├── _templates
+    ├── conf.py
+    └── index.rst
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="HTML作成">
+<h2>HTML作成<a class="headerlink" href="#HTML作成" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下のコマンドを打つことで,sourceディレクトリをもとに,サイトで使用されるhtmlを作成します(してくれる).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">sphinx</span> <span class="n">source</span><span class="o">/</span> <span class="n">build</span><span class="o">/</span>
+<span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>ここで,以下のコマンドを入力してみましょう.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="n">build</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">下のようなページが開いたかと思います．</div>
+<div class="line"><img alt="image0" src="_images/release2.png" /></div>
+</div>
+<p>これをgithubに置いて公開します.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="公開">
+<h2>公開<a class="headerlink" href="#公開" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最後に公開までします</p>
+<p>以下のコマンド入力してください.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">build</span><span class="o">/</span> <span class="n">docs</span><span class="o">/</span>
+<span class="n">touch</span> <span class="n">docs</span><span class="o">/.</span><span class="n">nojekyll</span>
+</pre></div>
+</div>
+<p>そして,準備していたgithubのリポジトリにpushします.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;適当なメッセージ&quot;</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">リポジトリのURL</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">最後に github上のリポジトリの設定を行います.</div>
+<div class="line">Setting から以下の箇所を 以下のように変更</div>
+<div class="line"><strong>None</strong> =&gt; <strong>master branch/docs folder</strong></div>
+</div>
+<p>下の図のような流れです. <img alt="image0" src="_images/release2.png" /> <img alt="image1" src="_images/release3.png" /> <img alt="image2" src="_images/release4.png" /></p>
+<p>そして,</p>
+<div class="line-block">
+<div class="line"><a href="#id4"><span class="problematic" id="id5">**</span></a><a class="reference external" href="https:/">https:/</a>/ユーザー名.github.io/リポジトリ名/ **</div>
+<div class="line">=&gt; 例 今回のやつ:<a class="reference external" href="https://syokoysn.github.io/how_to_sphinx/">https://syokoysn.github.io/how_to_sphinx/</a></div>
+<div class="line">に行くとりあえずできたのがわかります.</div>
+</div>
+<p>ここまでで, とりあえず公開するところまできました．</p>
+<p>次は themeを変更してみます.</p>
+</div>
+<div class="section" id="参考">
+<h2>参考<a class="headerlink" href="#参考" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://sky-joker.github.io/github_sphinx_example/#id2">sphinxで作ったドキュメントをGithubで公開</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="change_theme.html" class="btn btn-neutral float-right" title="Themeを変更する" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="preparation.html" class="btn btn-neutral float-left" title="準備" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Shoko Yoshino
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

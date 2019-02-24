@@ -1,0 +1,172 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 公開\n",
+    "ここでは，とりあえず公開することを目標とします．  \n",
+    "## ここですること\n",
+    "- 作業ディレクトリ作成\n",
+    "- quickstart\n",
+    "- HTML作成\n",
+    "- 公開\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*****\n",
+    "## 作業ディレクトリ作成\n",
+    "まず ディレクトリを作成し,作ったディレクトリへ移動   \n",
+    "\n",
+    "ここでは リポジトリ名(how_to_sphinx)と合わせてます.\n",
+    "```sh\n",
+    "mkdir how_to_sphinx\n",
+    "cd how_to_sphinx\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "## quickstart\n",
+    "次に 下のコマンドを打ちます\n",
+    "``` sh\n",
+    "sphinx-quickstart\n",
+    "\n",
+    "```\n",
+    "コマンドを打つといくつかの質問がありますが適当に対応してください.  \n",
+    "わりとエンター押して飛ばしても構わないです.以下, 今回のサイト作成時に対応したところです.  \n",
+    "-  Project name  \n",
+    ">  Project name: sphinxでwebサイト公開してみる\n",
+    "- Author name(s) \n",
+    "> Author name(s): Shoko Yoshino\n",
+    "-  Project release\n",
+    ">  Project release : 0.0.0\n",
+    "- Project language [en]: \n",
+    "> Project language [en]: ja"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "この段階までくると以下のようなディレクトリ構造になっています.  \n",
+    "``` \n",
+    ".\n",
+    "├── Makefile\n",
+    "├── build\n",
+    "├── make.bat\n",
+    "└── source\n",
+    "    ├── _static\n",
+    "    ├── _templates\n",
+    "    ├── conf.py\n",
+    "    └── index.rst\n",
+    "```\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "## HTML作成\n",
+    "以下のコマンドを打つことで,sourceディレクトリをもとに,サイトで使用されるhtmlを作成します(してくれる).\n",
+    "\n",
+    "```\n",
+    "python -m sphinx source/ build/\n",
+    "make html\n",
+    "```\n",
+    "ここで,以下のコマンドを入力してみましょう.   \n",
+    "```\n",
+    "open build/index.html\n",
+    "```\n",
+    "下のようなページが開いたかと思います．  \n",
+    "![](./images/release1.png)\n",
+    "\n",
+    "これをgithubに置いて公開します."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "## 公開\n",
+    "最後に公開までします\n",
+    "\n",
+    "以下のコマンド入力してください.  \n",
+    "```\n",
+    "cp -r build/ docs/\n",
+    "touch docs/.nojekyll\n",
+    "```\n",
+    "そして,準備していたgithubのリポジトリにpushします.  \n",
+    "```\n",
+    "git init \n",
+    "git add .\n",
+    "git commit -m \"適当なメッセージ\"\n",
+    "git remote add origin リポジトリのURL\n",
+    "git push -u origin master\n",
+    "```\n",
+    "\n",
+    "最後に\n",
+    "github上のリポジトリの設定を行います.   \n",
+    "Setting から以下の箇所を 以下のように変更  \n",
+    "**None** => **master branch/docs folder**  \n",
+    "\n",
+    "下の図のような流れです.\n",
+    "![](./images/release2.png)\n",
+    "![](./images/release3.png)\n",
+    "![](./images/release4.png)\n",
+    "\n",
+    "そして,  \n",
+    "\n",
+    "**https://ユーザー名.github.io/リポジトリ名/  **  \n",
+    "=>   例 今回のやつ:https://syokoysn.github.io/how_to_sphinx/  \n",
+    "に行くとりあえずできたのがわかります."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "ここまでで, とりあえず公開するところまできました．  \n",
+    " \n",
+    "次は themeを変更してみます."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 参考\n",
+    "- [sphinxで作ったドキュメントをGithubで公開](https://sky-joker.github.io/github_sphinx_example/#id2) \n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
