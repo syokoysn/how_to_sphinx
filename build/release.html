@@ -94,6 +94,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preparation.html">準備</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">公開</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ここですること">ここですること</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#作業ディレクトリ作成">作業ディレクトリ作成</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quickstart">quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#HTML作成">HTML作成</a></li>
@@ -193,15 +194,23 @@
 </style>
 <div class="section" id="公開">
 <h1>公開<a class="headerlink" href="#公開" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="line-block">
-<div class="line">ここでは，とりあえず公開することを目標とします．</div>
-<div class="line">## ここですること - 作業ディレクトリ作成 - quickstart - HTML作成 - 公開</div>
+<p>ここでは，とりあえず公開することを目標とします．</p>
+<div class="section" id="ここですること">
+<h2>ここですること<a class="headerlink" href="#ここですること" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>作業ディレクトリ作成</li>
+<li>quickstart</li>
+<li>HTML作成</li>
+<li>公開</li>
+</ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="作業ディレクトリ作成">
 <h2>作業ディレクトリ作成<a class="headerlink" href="#作業ディレクトリ作成" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>まず ディレクトリを作成し,作ったディレクトリへ移動</p>
-<p>ここでは リポジトリ名(how_to_sphinx)と合わせてます.</p>
+<div class="line-block">
+<div class="line">まず ディレクトリを作成し,作ったディレクトリへ移動</div>
+<div class="line">ここでは リポジトリ名(how_to_sphinx)と合わせてます.</div>
+</div>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir how_to_sphinx
 <span class="nb">cd</span> how_to_sphinx
 </pre></div>
@@ -218,9 +227,29 @@
 <div class="line">コマンドを打つといくつかの質問がありますが適当に対応してください.</div>
 <div class="line">わりとエンター押して飛ばしても構わないです.</div>
 <div class="line">以下, 今回のサイト作成時に対応したところです.</div>
-<div class="line">- Project name</div>
-<div class="line">&gt; Project name: sphinxでwebサイト公開してみる - Author name(s) &gt; Author name(s): Shoko Yoshino - Project release &gt; Project release : 0.0.0 - Project language [en]: &gt; Project language [en]: ja</div>
 </div>
+<ul>
+<li><p class="first">Project name</p>
+<blockquote>
+<div><p>Project name: sphinxでwebサイト公開してみる</p>
+</div></blockquote>
+</li>
+<li><p class="first">Author name(s)</p>
+<blockquote>
+<div><p>Author name(s): Shoko Yoshino</p>
+</div></blockquote>
+</li>
+<li><p class="first">Project release</p>
+<blockquote>
+<div><p>Project release : 0.0.0</p>
+</div></blockquote>
+</li>
+<li><p class="first">Project language [en]:</p>
+<blockquote>
+<div><p>Project language [en]: ja</p>
+</div></blockquote>
+</li>
+</ul>
 <p>この段階までくると以下のようなディレクトリ構造になっています.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
 ├── Makefile
@@ -274,10 +303,12 @@
 <div class="line">Setting から以下の箇所を 以下のように変更</div>
 <div class="line"><strong>None</strong> =&gt; <strong>master branch/docs folder</strong></div>
 </div>
-<p>下の図のような流れです. <img alt="image0" src="_images/release2.png" /> <img alt="image1" src="_images/release3.png" /> <img alt="image2" src="_images/release4.png" /></p>
+<p>下の図のような流れです. <img alt="image0" src="_images/release2.png" /></p>
+<p><img alt="image1" src="_images/release3.png" /></p>
+<p><img alt="image2" src="_images/release4.png" /></p>
 <p>そして,</p>
 <div class="line-block">
-<div class="line"><a href="#id4"><span class="problematic" id="id5">**</span></a><a class="reference external" href="https:/">https:/</a>/ユーザー名.github.io/リポジトリ名/ **</div>
+<div class="line"><a href="#id5"><span class="problematic" id="id6">**</span></a><a class="reference external" href="https:/">https:/</a>/ユーザー名.github.io/リポジトリ名/ **</div>
 <div class="line">=&gt; 例 今回のやつ: <a class="reference external" href="https://syokoysn.github.io/how_to_sphinx/">https://syokoysn.github.io/how_to_sphinx/</a></div>
 <div class="line">に行くとりあえずできたのがわかります.</div>
 </div>
