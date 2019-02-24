@@ -13,10 +13,11 @@
    "metadata": {},
    "source": [
     "すること\n",
+    "\n",
     "- nbsphinx のインストール\n",
     "- jupyter notebookの用意\n",
     "- conf.pyの設定\n",
-    "- index.rstの設定"
+    "- index.rstの設定\n"
    ]
   },
   {
@@ -24,9 +25,11 @@
    "metadata": {},
    "source": [
     "## nbsphinx のインストール\n",
+    "\n",
     "```\n",
     "pip install nbsphinx \n",
     "```\n",
+    "\n",
     "**以上!!**"
    ]
   },
@@ -58,9 +61,9 @@
     "]\n",
     " ```\n",
     " \n",
-    "extensionsというリストに  ```'nbsphinx'```を加えてください.  \n",
+    "extensionsというリストに  ```'nbsphinx'``` を加えてください.  \n",
     "加えたら良いので, appendでもいいです.    \n",
-    "**以上!! **\n",
+    "**以上!!**\n",
     " "
    ]
   },
@@ -71,8 +74,7 @@
     "## index\n",
     " source ディレクトリ内にある index.rstの設定に以下の変更を加えます. \n",
     " \n",
-    " \n",
-    " **以上!! **"
+    " **以上!!**"
    ]
   },
   {
@@ -80,7 +82,7 @@
    "metadata": {},
    "source": [
     "できたらpageをみてみましょう.  \n",
-    "![](./images/nbsphinx1.png)"
+    "![pict1](./images/nbsphinx1.png)"
    ]
   },
   {
@@ -89,7 +91,7 @@
    "source": [
     "Contentsの項目が増えました.!!\n",
     "準備のリンクへ飛ぶと以下のようなnotebookを元としたpageに行きます.  \n",
-    "![](./images/nbsphinx2.png)"
+    "![pict2](./images/nbsphinx2.png)"
    ]
   },
   {
