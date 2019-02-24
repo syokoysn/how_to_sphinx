@@ -60,10 +60,11 @@
    "source": [
     "**インストール**  \n",
     "pip でいけます\n",
+    "\n",
     "```\n",
     " pip install Sphinx\n",
     " pip install nbsphinx \n",
-    " ``` "
+    "``` "
    ]
   },
   {
