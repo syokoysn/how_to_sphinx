@@ -9,9 +9,12 @@ Welcome to sphinxでwebサイト公開してみる's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-
-
+    
+   preparation
+   release
+   change_theme
+   nbsphinx 
+   
 Indices and tables
 ==================
 
