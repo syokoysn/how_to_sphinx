@@ -21,11 +21,21 @@
    "source": [
     "## 1. Githubにリポジトリ作成\n",
     "プロジェクトのサイトかそれ以外かの二つの方法がある   \n",
-    "詳しくは[こちら](https://pages.github.com/)  \n",
-    "\n",
+    "詳しくは[こちら](https://pages.github.com/)  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "1. プロジェクトのサイト\n",
-    "2.  それ以外\n",
-    "\n",
+    "2.  それ以外"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "単純にリポジトリ作成したらいいです.  \n",
     "ここでは, この作り方のwebサイトを作るために  how_to_sphinx というリポジトリを作成しました.  "
    ]
