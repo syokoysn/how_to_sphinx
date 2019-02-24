@@ -9,7 +9,8 @@
    "source": [
     "# 準備 \n",
     "1. githubにリポジトリ作成\n",
-    "2.  必要なライブラリのインストール\n"
+    "2.  必要なライブラリのインストール\n",
+    "***"
    ]
   },
   {
@@ -37,7 +38,8 @@
    "metadata": {},
    "source": [
     "単純にリポジトリ作成したらいいです.  \n",
-    "ここでは, この作り方のwebサイトを作るために  how_to_sphinx というリポジトリを作成しました.  "
+    "ここでは, この作り方のwebサイトを作るために  how_to_sphinx というリポジトリを作成しました.    \n",
+    "***"
    ]
   },
   {
@@ -73,7 +75,9 @@
    "metadata": {},
    "source": [
     "とりあえず準備終わりです.  \n",
-    "次は公開するまでを書きます"
+    "次は公開するまでを書きます\n",
+    "\n",
+    "***"
    ]
   },
   {
@@ -84,6 +88,13 @@
     "- [Github pages 公式](https://pages.github.com/)\n",
     "- [Qita : Sphinxを便利にして、みんなに使ってもらいたい](https://qiita.com/pashango2/items/d1b379b699af85b529ce#jupyter%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF%E3%82%92%E5%8F%96%E3%82%8A%E8%BE%BC%E3%82%802017-02-06%E8%BF%BD%E5%8A%A0)"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
