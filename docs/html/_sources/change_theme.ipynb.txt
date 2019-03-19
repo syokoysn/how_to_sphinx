@@ -21,7 +21,7 @@
    "source": [
     "それぞれインストールは以下のようにします.  \n",
     "\n",
-    " ```\n",
+    " ``` \n",
     " pip install sphinx_rtd_theme\n",
     " ```"
    ]
@@ -36,6 +36,21 @@
     "\n",
     "\n",
     "![pict1](./images/change_theme1.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "コピペ用\n",
+    "\n",
+    "``` py\n",
+    "\n",
+    "#html_theme = 'alabaster'  <= コメントアウト\n",
+    "import sphinx_rtd_theme # add \n",
+    "html_theme = 'sphinx_rtd_theme' # add \n",
+    "html_theme_path = [sphinx_rtd_theme.get_html_theme_path()] # add \n",
+    "```"
    ]
   },
   {
