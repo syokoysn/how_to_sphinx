@@ -217,12 +217,17 @@
 <div class="section" id="conf.pyの設定">
 <h2>conf.pyの設定<a class="headerlink" href="#conf.pyの設定" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>source ディレクトリ内にあるconf.py に以下の変更を加えます.</p>
-<p><code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">'nbsphinx'</span> <span class="pre">]</span></code></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;nbsphinx&#39;</span> <span class="p">]</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;**.ipynb_checkpoints&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
 <div class="line-block">
 <div class="line">extensionsというリストに <code class="docutils literal notranslate"><span class="pre">'nbsphinx'</span></code> を加えてください.</div>
 <div class="line">加えたら良いので, appendでもいいです.</div>
 <div class="line"><strong>以上!!</strong></div>
 </div>
+<p>``` py</p>
+<p>extensions = [ 『nbsphinx』 ] exclude_patterns = [『**.ipynb_checkpoints』] ```</p>
 </div>
 <div class="section" id="index">
 <h2>index<a class="headerlink" href="#index" title="このヘッドラインへのパーマリンク">¶</a></h2>
