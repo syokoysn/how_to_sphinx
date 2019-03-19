@@ -217,7 +217,8 @@
 <div class="section" id="conf.pyの設定">
 <h2>conf.pyの設定<a class="headerlink" href="#conf.pyの設定" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>source ディレクトリ内にあるconf.py に以下の変更を加えます.</p>
-<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">[</span>&#160;&#160;&#160;&#160; <span class="pre">'nbsphinx'</span> <span class="pre">]</span></code></p>
+<p>``` py</p>
+<p>extensions = [ 『nbsphinx』 ] ```</p>
 <div class="line-block">
 <div class="line">extensionsというリストに <code class="docutils literal notranslate"><span class="pre">'nbsphinx'</span></code> を加えてください.</div>
 <div class="line">加えたら良いので, appendでもいいです.</div>
@@ -226,8 +227,17 @@
 </div>
 <div class="section" id="index">
 <h2>index<a class="headerlink" href="#index" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>source ディレクトリ内にある index.rstの設定に以下の変更を加えます.</p>
+<p>source ディレクトリ内にある index.rstの設定に以下の変更を加えます. (preparation.ipynbを表示できるようにする)</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>---------
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:caption:</span>
+
+   preparation
+</pre></div>
+</div>
 <p><strong>以上!!</strong></p>
+<hr class="docutils" />
 <div class="line-block">
 <div class="line">できたらpageをみてみましょう.</div>
 <div class="line"><img alt="pict1" src="_images/nbsphinx1.png" /></div>

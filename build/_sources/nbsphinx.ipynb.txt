@@ -55,10 +55,9 @@
     "## conf.pyの設定\n",
     "source ディレクトリ内にあるconf.py に以下の変更を加えます.\n",
     "\n",
-    "``` python\n",
-    "extensions = [\n",
-    "    'nbsphinx'\n",
-    "]\n",
+    "``` py \n",
+    "\n",
+    "extensions = [ 'nbsphinx' ]\n",
     " ```\n",
     " \n",
     "extensionsというリストに  ```'nbsphinx'``` を加えてください.  \n",
@@ -73,8 +72,22 @@
    "source": [
     "## index\n",
     " source ディレクトリ内にある index.rstの設定に以下の変更を加えます. \n",
+    " (preparation.ipynbを表示できるようにする)\n",
     " \n",
-    " **以上!!**"
+    "``` rst\n",
+    "\n",
+    "---------\n",
+    "\n",
+    ".. toctree::\n",
+    "   :caption:\n",
+    "\n",
+    "   preparation\n",
+    "```\n",
+    " \n",
+    " **以上!!**\n",
+    " \n",
+    " \n",
+    " ***"
    ]
   },
   {
